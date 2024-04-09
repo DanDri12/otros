@@ -1,0 +1,102 @@
+nav{
+    width: 97%;
+    background-color: rgba(0, 145, 255);
+    display: flex;
+    justify-content: space-between;
+    max-height: 100px;
+    padding: 0 30px;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.4s;
+}
+
+.button-menu{
+    display: none;
+    margin: 6px;
+    padding: 20px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+}
+
+nav img{
+    width: 70px;
+    margin: 1rem;
+    border-radius: 100%;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    padding: 20px;
+}
+
+nav ul li a{
+    color: black;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+nav ul li a:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+@media(max-width: 500px){
+    .button-menu{
+        display: flex;
+    }
+    nav{
+        flex-direction: column;
+        max-height: none;
+    }
+    nav img{
+        display: none;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        align-items: start;
+    }
+    nav .accion{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: static;
+    bottom: 0;
+}
+
+footer .social{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer .social ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media(max-width: 500px){
+    footer .social{
+        display: flex;
+        flex-direction: column;
+    }
+}
